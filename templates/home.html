@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ace Dynamics</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+    <link href="https://t4.ftcdn.net/jpg/03/34/40/37/360_F_334403790_2bxunpFUCfMNzqfFWxmS36XXMnY9SgrK.jpg" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <style>
+      h1 {
+  text-transform: capitalize;
+  font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  color: #51372f;
+  /*   outline: 1px solid red; */
+}
+
+.container {
+  /*   outline: 1px solid blue; */
+  overflow: hidden;
+  border-bottom: 4px solid #51372f;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx4S1pchchQzUamiClIpsU9HUFo6bf5EoYnA&usqp=CAU" alt="dev">
+        <h1>
+          <p style="text-align: center"><h1>Ace Dynamics</h1>Fruad Detection</p>
+          
+        </h1>
+      </div>
+    </header>
+
+    <div class="ml-container">
+      <p style="text-align: center">
+        Enter Your last 30 transactions(in order):
+      </p>
+
+      <form action="{{ url_for('predict')}}" method="POST">
+        <!-- <input type="text" name="comment"/> -->
+        <div class="justify">
+          <textarea name="message" rows="8" cols="50"></textarea>
+        </div>
+        <br/>
+
+        <input type="submit" class="btn-info" value="Predict" />
+      </form>
+    </div>
+    <script>
+      const headingTl = gsap.timeline({
+  repeat: -1,
+  repeatDelay: 2,
+  yoyo: true
+});
+
+headingTl
+  .from(".heading", {
+    duration: 1,
+    scaleX: 0,
+    transformOrigin: "left",
+    ease: "expo.inOut"
+  })
+  .from(
+    ".heading h1",
+    {
+      y: "100%",
+      duration: 0.8,
+      ease: "expo.out"
+    },
+    "-=0.2"
+  )
+  .from(
+    ".heading",
+    {
+      css: { borderBottom: "4px solid black" },
+      duration: 2,
+      transformOrigin: "right",
+      ease: "none"
+    },
+    "-=1"
+  )
+  .from(
+    ".heading h1",
+    {
+      duration: 2,
+      transformOrigin: "right",
+      ease: "none",
+      css: { color: "black" }
+    },
+    "-=2"
+  );
+
+    </script>
+  </body>
+</html>

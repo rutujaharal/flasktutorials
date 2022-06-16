@@ -1,0 +1,49 @@
+body{
+	font-size: 16px;
+	font-family: Open Sans, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	line-height: 1.6;
+	padding: 5px;
+	
+	margin: 10% 20%;
+	background: white;
+	background-image: url("dev3.jpg")
+	
+}
+
+header{
+	font-size: 1.6em;
+	color: #eee;
+}
+
+header h1{
+	font-size: 1.8em;
+	color: #eee;
+}
+p{
+	color: #eee;
+}
+
+.btn-info{
+	border: 1.5px solid black;
+	padding: 15px 15px;
+	margin: 1px;
+	box-shadow: 0 0 4px #eee;
+	cursor: pointer;
+}
+
+.btn-info:hover{
+	background-color: transparent;
+	box-shadow: 0 0 10px #eee;
+}
+
+.ml-container{
+	font-size: 1.4em;
+}
+
+.ml-container textarea{
+	width: 100%;
+}
